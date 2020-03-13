@@ -14,3 +14,4 @@ To run:
    //this will decode the steg1.txt file into its orginial binary string format based on ref1.txt in decoded1.txt
    
  
+**keep DNA reference strand in uppercase
