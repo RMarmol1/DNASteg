@@ -181,7 +181,7 @@ class Driver_dnasteg{
         }
         
         //convert index values to complement
-        dnaSingles = getComplement(dnaSingles);
+        dnaSingles = getRevComplement(dnaSingles);
         
         //convert to binary
         dnaSingles = convertToBin(dnaSingles);
@@ -262,7 +262,7 @@ class Driver_dnasteg{
     
     for(int i = 0; i < s.size(); i++){
       if(s.get(i).equals("A")){
-        comp.add("T");
+        comp.add("C");
       }
       else if (s.get(i).equals("T")){
         comp.add("A");
@@ -271,7 +271,29 @@ class Driver_dnasteg{
         comp.add("G");
       }
       else if (s.get(i).equals("G")){
+        comp.add("T");
+      }
+    }
+    
+    return comp;
+    
+  }
+  
+  public static ArrayList<String> getRevComplement (ArrayList<String> s){
+    ArrayList<String> comp = new ArrayList<String>();
+    
+    for(int i = 0; i < s.size(); i++){
+      if(s.get(i).equals("C")){
+        comp.add("A");
+      }
+      else if (s.get(i).equals("A")){
+        comp.add("T");
+      }
+      else if (s.get(i).equals("G")){
         comp.add("C");
+      }
+      else if (s.get(i).equals("T")){
+        comp.add("G");
       }
     }
       
